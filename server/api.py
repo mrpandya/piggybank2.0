@@ -316,5 +316,3 @@ def withdraw():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8085)
-
-#curl -d '{"username":"manan","password":"12356"}' -H "Content-Type:application/json" -X POST http://0.0.0.0:8085/api/delete
