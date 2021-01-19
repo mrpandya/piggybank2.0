@@ -1,0 +1,14 @@
+<div class="create">
+    <div class="head">
+        <h2>Enter the user to create its new account</h2>
+    </div>
+    <form class="form" [formGroup]="createForm" (ngSubmit)="create(createForm.value)">
+        <input class="form-input" type="text"  placeholder="enter username" id="user" formControlName="username"/>
+        <input class="form-input" placeholder="enter password" type="password" id="user" formControlName="password"/>
+        <!-- <input class="form-input" placeholder="re-enter password" type="password" id="user" formControlName="password2"/> -->
+        <button class="btn" type="submit">Create Account</button>
+    </form>
+    <!-- <div class="error-message" *ngIf="if404">
+        <span>user not found please try again</span>
+    </div> -->
+</div>

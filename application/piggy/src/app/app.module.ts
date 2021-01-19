@@ -9,6 +9,7 @@ import { StatementComponent } from './statement/statement.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WithdrawComponent } from './withdraw/withdraw.component';
+import { CreateNewComponent } from './create-new/create-new.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { WithdrawComponent } from './withdraw/withdraw.component';
     StatementComponent,
     DepositComponent,
     WithdrawComponent,
+    CreateNewComponent,
   ],
   imports: [
     BrowserModule,
