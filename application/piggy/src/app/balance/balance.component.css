@@ -45,17 +45,18 @@
 }
 
 .balance-area{
-    background-color:lightgrey;
-    border-radius:10px;
+    background-color:white;
+    /* border-radius:10px; */
     padding:10px 20px;
     margin-top:20px;
-    border-bottom:1px solid #303030;
     text-align: center;
 }
 
 .balance-area span:nth-child(1){
-    margin-right:10px;
-    margin-left:10px;
+    padding:0px 10px;
+    border-bottom:1px solid #303030;
+    /* margin-right:10px; */
+    /* margin-left:10px; */
 }
 
 .balance-area span:nth-child(3){

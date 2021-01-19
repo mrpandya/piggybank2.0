@@ -49,11 +49,20 @@
 }
 
 .transaction-area{
-    background-color:lightgrey;
+    background-color:white;
     border-radius:10px;
     padding:10px 20px;
-    border-bottom:1px solid #303030;
+    border-bottom:0px solid #303030;
     text-align: center;
+}
+
+table{
+    border:none !important;
+    box-shadow: -2px -2px 1px white;
+}
+th,td{
+    border:none !important;
+    box-shadow: 2px 2px 1px lightgrey;
 }
 
 .transaction-area span:nth-child(1){

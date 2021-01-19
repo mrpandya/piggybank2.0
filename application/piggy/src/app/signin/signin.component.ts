@@ -38,6 +38,7 @@ export class SigninComponent implements OnInit {
       else{
         this.sessionService.createSession(data.username);
         window.alert('login is successful');
+        location.replace('/balance');
       }
     })
   }

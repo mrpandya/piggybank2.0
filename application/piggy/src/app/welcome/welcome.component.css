@@ -1,0 +1,24 @@
+h1{
+    margin:0;
+    color:black;
+    margin:auto;
+    text-align: center; 
+}
+.welcome{
+    position: absolute;
+    top:40%;
+    left:40%;
+    right:40%;
+    text-align: end;
+    margin:auto;
+}
+.welcome h1{
+    margin-bottom:25px;
+}
+
+.welcome a{
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    font-size:15px;
+}

@@ -11,8 +11,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { CreateNewComponent } from './create-new/create-new.component';
 import { SigninComponent } from './signin/signin.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   declarations: [
     AppComponent,
     BalanceComponent,
@@ -21,13 +29,7 @@ import { SigninComponent } from './signin/signin.component';
     WithdrawComponent,
     CreateNewComponent,
     SigninComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
+    WelcomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
