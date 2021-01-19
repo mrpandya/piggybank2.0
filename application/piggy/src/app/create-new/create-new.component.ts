@@ -20,6 +20,7 @@ export class CreateNewComponent implements OnInit {
     private createNewService:CreateNewService,
     private sessionService:SessionService,
   ) {
+    // declaring the form elements
     this.createForm=this.formBuilder.group({
       username: '',
       password: '',

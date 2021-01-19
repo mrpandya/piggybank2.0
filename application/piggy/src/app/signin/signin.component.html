@@ -1,12 +1,12 @@
 <div class="create">
     <div class="head">
-        <h2>Sign Up</h2>
+        <h2>Sign In</h2>
     </div>
-    <form class="form" [formGroup]="createForm" (ngSubmit)="create(createForm.value)">
+    <form class="form" [formGroup]="signinForm" (ngSubmit)="Signin(signinForm.value)">
         <input class="form-input" type="text"  placeholder="enter username" id="user" formControlName="username"/>
         <input class="form-input" placeholder="enter password" type="password" id="user" formControlName="password"/>
         <!-- <input class="form-input" placeholder="re-enter password" type="password" id="user" formControlName="password2"/> -->
-        <button class="btn" type="submit">Create Account</button>
+        <button class="btn" type="submit">Sign In</button>
     </form>
     <!-- <div class="error-message" *ngIf="if404">
         <span>user not found please try again</span>
