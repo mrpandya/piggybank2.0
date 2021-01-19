@@ -1,0 +1,22 @@
+<div class="statement">
+    <div class="head">
+        <h2>{{username}}</h2>
+    </div>
+    <div *ngIf="ifChecked">
+        <div *ngIf="statement">
+            <table style="width:100%">
+                <tr class="transaction-area">
+                  <th>Balance</th>
+                  <th>Last Transaction </th> 
+                </tr>
+                <tr class="transaction-area" *ngFor="let trans of statement | keyvalue" >
+                    <td>{{ trans.value.balance }} </td>
+                    <td>{{ trans.value.last_transaction }} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="error-message" *ngIf="if404">
+            <p>No user found please try again</p>
+    </div>
+</div>
