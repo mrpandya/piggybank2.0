@@ -54,7 +54,7 @@
 
 .balance-area span:nth-child(1){
     padding:0px 10px;
-    border-bottom:1px solid #303030;
+    border-bottom:5px solid lightblue;
     /* margin-right:10px; */
     /* margin-left:10px; */
 }

@@ -18,14 +18,18 @@ export class StatementComponent implements OnInit {
     private statementService: StatementService,
     private sessionService: SessionService,
   ) {
-      // to get the username of the user who's session is currently active
-      this.username=this.sessionService.getUser();
+      // to get the username of the user from the session storage
+      this.username=sessionStorage.getItem('username');
       this.statement={0:{'balance':'-','last_transaction':'-'}};
    }
   
    // to show the statement on init (load)
   ngOnInit() {
-    this.showStatement(this.username);
+    if(sessionStorage.getItem('username')==undefined){
+      window.location.replace('/');
+    }else{
+      this.showStatement(this.username);
+    }
   }
 
   // it fetches the returned data from the statementService and it checks if the response is proper or not

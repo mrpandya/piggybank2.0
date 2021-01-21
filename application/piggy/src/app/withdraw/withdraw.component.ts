@@ -24,14 +24,17 @@ export class WithdrawComponent implements OnInit {
     private withdrawService: WithdrawService,
     private sessionService: SessionService,
   ) {
-    // to assign the username the currently logged in user's id
-    this.username = this.sessionService.getUser();
+    // to get the username from the session storage
+    this.username = sessionStorage.getItem('username');
     this.withdrawForm = this.formBuilder.group({
       amount : '',
     })
   }
 
   ngOnInit(): void {
+    if(sessionStorage.getItem('username')==undefined){
+      window.location.replace('/');
+    }
   }
 
   // function to withdraw the money

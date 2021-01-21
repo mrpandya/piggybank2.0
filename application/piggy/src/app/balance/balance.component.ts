@@ -16,14 +16,19 @@ export class BalanceComponent implements OnInit {
     private balanceService:BalanceService,
     private sessionService:SessionService,
   ) {
-    // getting the username of the user who is currently logged in
-    this.username=this.sessionService.getUser();
+    // getting the username of the user who is currently logged in from the session storage
+    this.username=sessionStorage.getItem('username');
     this.data={'user':this.username,'balance':'-'};
   }
 
   // to show balance on init (load)
   ngOnInit() {
-   this.showBalance();
+    if(sessionStorage.getItem('username')==undefined){
+      window.location.replace('/');
+    }
+    else{
+      this.showBalance();
+    }
   }
 
   // to check for the data fetched by the balanceService and assigning vars accordingly

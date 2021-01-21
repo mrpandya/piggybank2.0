@@ -60,9 +60,13 @@ table{
     border:none !important;
     box-shadow: -2px -2px 1px white;
 }
-th,td{
+th{
     border:none !important;
-    box-shadow: 2px 2px 1px lightgrey;
+    box-shadow: 0px -2px 2px 1px rgb(247, 185, 185),0px 2px 1px 2px lightcyan;
+}
+td{
+    border:none !important;
+    box-shadow: 0px 2px 1px 2px lightcyan;
 }
 
 .transaction-area span:nth-child(1){
