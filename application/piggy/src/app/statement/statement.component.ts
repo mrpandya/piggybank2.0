@@ -29,6 +29,7 @@ export class StatementComponent implements OnInit {
       window.location.replace('/');
     }else{
       this.showStatement(this.username);
+    document.getElementById('statement').classList.add('active');
     }
   }
 

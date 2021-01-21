@@ -4,21 +4,41 @@ h1{
     margin:auto;
     text-align: center; 
 }
-.welcome{
-    position: absolute;
-    top:40%;
-    left:40%;
-    right:40%;
-    text-align: end;
-    margin:auto;
+@media (max-width:768px){
+    .welcome{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        text-align: end;
+        align-items: center;
+        margin:60% auto;
+        justify-items: center;
+    }
+}
+@media (min-width: 768px){
+    .welcome{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        text-align: end;
+        align-items: center;
+        margin:25% auto;
+        justify-items: center;
+    }
 }
 .welcome h1{
     margin-bottom:25px;
 }
 
-.welcome a{
+.welcome .links a{
     text-align: center;
     text-decoration: none;
     color:black;
     font-size:15px;
+}
+
+.links{
+    display:flex;
+    flex-direction:column;
+    text-align:end;
 }

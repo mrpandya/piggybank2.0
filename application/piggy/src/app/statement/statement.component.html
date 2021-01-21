@@ -1,6 +1,8 @@
+<app-navbar></app-navbar>
+
 <div class="statement">
     <div class="head">
-        <h2>{{username}}</h2>
+        <h2>Statement :</h2>
     </div>
     <div *ngIf="ifChecked">
         <div *ngIf="statement">
@@ -16,7 +18,7 @@
             </table>
         </div>
     </div>
-    <div class="error-message" *ngIf="if404">
+    <!-- <div class="error-message" *ngIf="if404">
             <p>No user found please try again</p>
-    </div>
+    </div> -->
 </div>

@@ -32,6 +32,9 @@ export class DepositComponent implements OnInit {
     if(sessionStorage.getItem('username')==undefined){
       window.location.replace('/');
     }
+    else{
+      document.getElementById("deposit").classList.add('active');
+    }
   }
 
   // to deposit the amount on click

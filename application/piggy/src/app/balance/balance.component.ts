@@ -27,6 +27,7 @@ export class BalanceComponent implements OnInit {
       window.location.replace('/');
     }
     else{
+      document.getElementById("balance").classList.add('active');
       this.showBalance();
     }
   }

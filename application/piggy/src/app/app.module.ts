@@ -14,6 +14,8 @@ import { CreateNewComponent } from './create-new/create-new.component';
 import { SigninComponent } from './signin/signin.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MY_AWESOME_SERVICE_STORAGE,SetSession } from './session';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -31,6 +33,8 @@ import { MY_AWESOME_SERVICE_STORAGE,SetSession } from './session';
     CreateNewComponent,
     SigninComponent,
     WelcomeComponent,
+    NavbarComponent,
+    LogoutComponent,
   ],
   providers: [
     { provide:MY_AWESOME_SERVICE_STORAGE,useExisting:SESSION_STORAGE },

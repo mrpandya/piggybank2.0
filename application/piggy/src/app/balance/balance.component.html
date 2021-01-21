@@ -1,11 +1,12 @@
+<app-navbar></app-navbar>
 <div class="balance">
     <div class="head">
-        <h2>{{username}}</h2>
+        <h2>Your Balance is :</h2>
     </div>
     <div class="balance-area" *ngIf="data && !if404">
-        <span>{{data.balance}}</span>
+        <h2><span>{{data.balance}}</span></h2>
     </div>
-    <div class="error-message" *ngIf="if404">
+    <!-- <div class="error-message" *ngIf="if404">
         <span>user not found please try again</span>
-    </div>
+    </div> -->
 </div>
