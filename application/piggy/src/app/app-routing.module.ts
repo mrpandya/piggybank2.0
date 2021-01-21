@@ -7,6 +7,7 @@ import { StatementComponent } from './statement/statement.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path:'', component: WelcomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path:'statement', component:StatementComponent },
   { path:'withdraw', component:WithdrawComponent },
   { path:'deposit', component:DepositComponent },
+  { path:'logout', component:LogoutComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SESSION_STORAGE } from 'ngx-webstorage-service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,12 +9,13 @@ import { AppComponent } from './app.component';
 import { BalanceComponent } from './balance/balance.component';
 import { StatementComponent } from './statement/statement.component';
 import { DepositComponent } from './deposit/deposit.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { CreateNewComponent } from './create-new/create-new.component';
 import { SigninComponent } from './signin/signin.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { MY_AWESOME_SERVICE_STORAGE,SetSession } from './session';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,8 +33,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CreateNewComponent,
     SigninComponent,
     WelcomeComponent,
+    NavbarComponent,
+    LogoutComponent,
   ],
-  providers: [],
+  providers: [
+    { provide:MY_AWESOME_SERVICE_STORAGE,useExisting:SESSION_STORAGE },
+    SetSession,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

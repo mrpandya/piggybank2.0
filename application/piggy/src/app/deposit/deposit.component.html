@@ -1,7 +1,5 @@
+<app-navbar></app-navbar>
 <div class="deposit">
-    <div class="head">
-        <h2>{{user}}</h2>
-    </div>
     <div class="head">
         <h2>Enter the amount you want to deposit</h2>
     </div>
@@ -9,7 +7,7 @@
         <input class="form-input"type="text"  placeholder="Enter amount"  id="amount" formControlName="amount"/>
         <button class="btn"type="submit" (click)="onclick()">Deposit</button>
     </form>
-    <p class="error-message" *ngIf="error">
+    <!-- <p class="error-message" *ngIf="error">
         user not found please try again
-    </p>
+    </p> -->
 </div>

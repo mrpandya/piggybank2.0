@@ -20,15 +20,21 @@ export class DepositComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private depositService:DepositService,
-    private sessionService:SessionService,
   ) {
-    this.user=this.sessionService.getUser();
+    // getting the username from the session storage
+    this.user=sessionStorage.getItem('username');
     this.depositForm = this.formBuilder.group({
       amount : '',
     })
   }
 
   ngOnInit(): void {
+    if(sessionStorage.getItem('username')==undefined){
+      window.location.replace('/');
+    }
+    else{
+      document.getElementById("deposit").classList.add('active');
+    }
   }
 
   // to deposit the amount on click

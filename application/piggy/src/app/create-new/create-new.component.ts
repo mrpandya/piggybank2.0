@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 import { Token,CreateNewService } from './create-new.service';
-import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-create-new',
@@ -18,7 +17,6 @@ export class CreateNewComponent implements OnInit {
     // injecting the FormBuilder
     private formBuilder:FormBuilder,
     private createNewService:CreateNewService,
-    private sessionService:SessionService,
   ) {
     // declaring the form elements
     this.createForm=this.formBuilder.group({
@@ -43,8 +41,9 @@ export class CreateNewComponent implements OnInit {
         return;
       }
       // to create the session username once the response is a success and alert the user
-      this.sessionService.createSession(user.username);
+      sessionStorage.setItem('username',user.username);
       window.alert('user has been created');
+      window.location.replace('/balance');
     });
   }
 }
