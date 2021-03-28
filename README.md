@@ -49,6 +49,10 @@ Go to the application folder -
 ```
   $ cd ../application/piggy
  ```
+ to install the requirements -
+ ```
+ $ npm install
+ ```
  to start the angular project -
 ```
   $ ng serve --open
